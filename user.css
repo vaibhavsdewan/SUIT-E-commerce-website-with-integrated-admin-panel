@@ -30,6 +30,13 @@ header .right{
     align-items: center;
     gap: 30px;
 }
+
+
+h2{
+    color: #751853;
+}
+
+
 .nav ul{
     padding:0;
     list-style: none;
@@ -37,13 +44,42 @@ header .right{
     gap: 30px;
 }
 .nav ul li{
-    font-size: 15px;
+    font-size: 16.5px;
     font-weight: 500;
     cursor: pointer;
 }
 .nav ul li:hover{
     color:#ee356c;
 }
+
+
+.nav-nav{
+    position: absolute;
+    background-color: white;
+    padding:10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.03);
+    border:0.1px solid #ebebeb;
+    display: none;
+    gap: 15px;
+    width: auto;
+}
+.has-dropdown:hover .nav-nav {
+    display: grid; /* Show dropdown on hover */
+    grid-template-columns: repeat(2, auto); /* Two equal-width columns */
+}
+.nav-nav .col{
+    display: flex;
+    flex-direction: column;
+}
+.nav-nav .col a{
+    padding: 7px;
+    text-decoration: none;
+}
+.nav-nav .col a:first-child{
+    color:#ee356c;
+}
+
+
 
 
 .inputSearch{
@@ -66,13 +102,16 @@ header .right{
     display: flex;
     align-items: center;
     gap: 7px;
+    font-size: 16.5px;
     font-weight: 500;
     text-decoration: none; /* Optional: removes underline */
     color: inherit; /* Optional: matches the text color */
 }
 
+
+
 .subNavigation{
-    font-size: 13px;
+    font-size: 14px;
     padding:0px 20px;
     margin:0;
     display: flex;
@@ -104,7 +143,7 @@ header .right{
     box-shadow: 2px 2px 5px rgba(0,0,0,0.03);
     border:0.1px solid #ebebeb;
     /* display: flex; */
-    gap: 10px;
+    gap: 15px;
     width: auto;
     display: none;
 }
@@ -135,17 +174,39 @@ header .right{
 .sub-navigatin-nav .col a:first-child{
     color:#ee356c;
 }
+
+
+
 .categorySection{
     width: fit-content;
     margin: auto;
     margin-top: 20px;
 }
+.image-with-text{
+    display: inline-block;
+    text-align: center;
+    margin: 14px; 
+    vertical-align: top;
+}
+.image-with-text img{
+    display: block;
+    margin: 0 auto;
+}
+.image-with-text p{
+    margin: 10.5px 0 0 0;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: #050000;
+    line-height: 1; /* Adjust line height to ensure no extra spacing */
+}
+
 
 .imageFull img{
     width: 100%;
 }
+
 .slideCategory{
-    padding: 20px;
+    padding: 24px;
     position: relative;
     /* overflow: hidden; */
 }
@@ -164,13 +225,23 @@ header .right{
     border:none;
     outline: none;
     background: white;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 100px;
     padding:10px;
     width: 60px;
     height: 60px;
-
+    z-index: 2; /* Higher than #imageSlideContaienr */
+    top: 50%; /* Adjust position */
+    transform: translateY(-50%);
+    cursor: pointer;
 }
+.btn-container-prev {
+    left: 10px;
+}
+.btn-container-next {
+    right: 10px;
+}
+
 .slideCategory-Image img{
     min-width: 100px;
 }
@@ -179,6 +250,20 @@ header .right{
     width: 100%;
     overflow:hidden
 }
+.slideCategory-Image p{
+    margin: 1px 0 0 0;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    color: #050000;
+    line-height: 1;   
+}
+#imageSlideContaienr {
+    position: relative;
+    z-index: 1;
+}
+
+
+
 .listofProduct,
 .brandTopproduct,
 .hardToResistDeals_image{
@@ -209,6 +294,8 @@ header .right{
 .hardtoresistDeals{
     background : #ffca8a;
 }
+
+
 #newsletter{
     display: flex;
     justify-content: space-between;
@@ -255,6 +342,8 @@ header .right{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+
 footer{
     display: flex;
     flex-wrap: wrap;
