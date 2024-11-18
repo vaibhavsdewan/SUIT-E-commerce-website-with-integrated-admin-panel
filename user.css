@@ -301,10 +301,15 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url("")
+    background-image: url("assets/imgs/background.png");
+    background-position: center;
     background-repeat: no-repeat;
     background-position: 20% 30%;
+    background-size: cover;
     background-color:#041e42;
+    opacity: 0.95;
+    background-blend-mode: overlay;
+    padding: 3.25rem;
 }
 #newsletter h4{
     font-size: 22px;
@@ -312,7 +317,7 @@ h2{
     color: white;
 }
 #newsletter p{
-    font-size: 14px;
+    font-size: 16.5px;
     font-weight: 600;
     color: #818ea0;
 }
@@ -320,27 +325,32 @@ h2{
     color: #ffbd27;
 }
 }
-#newsletter .form{
+#newsletter .form1{
     display: flex;
-    width: 40%;
+    width: 60%;
+    align-items: center;
+    gap: 0;
 }
 #newsletter input{
     height: 3.125rem;
     padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    font-size: 16.5px;
+    flex: 1;
+    width: 70%;
+    border: 1px solid #ccc;;
+    border-radius: 4px 0 0 4px; /* Ensure corners match */
+    box-sizing: border-box;
 }
 #newsletter button{
+    height: 3.125rem;
+    padding: 0 1rem;
+    width: auto;
     background-color: #088178;
     color: white;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-radius: 0 4px 4px 0; /* Matches input corners */
+    font-size: 16.5px;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 
@@ -348,47 +358,64 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 3rem;
 }
 footer .col{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20px;
-}
-footer h4{
-    font-size: 14px;
-    padding-bottom: 20px;
 }
 footer p{
-    font-size: 13px;
+    font-size: 13.6px;
     margin: 0 0 8px 0;
 }
 footer a{
-    font-size: 13px;
+    font-size: 13.6px;
     text-decoration: none;
     color: #222;
     margin-bottom: 10px;
 }
+footer h4{
+    font-size: 16.3px;
+    padding-bottom: 5px;
+}
 footer .follow i{
-    margin-top: 20px;
     color: #465b62;
-    padding-right: 4px;
     cursor: pointer;
-}
-footer .install .row img{
-    border: 1px solid #088178;
-    border-radius: 6px;
-}
-footer .install img{
-    margin: 10px 0 15px 0;
 }
 footer .follow i:hover,
 footer a:hover {
     color: #088178;
 }
+
+footer .install {
+    flex: 1; 
+    text-align: left;
+    align-items: center;
+}
+footer .install .row {
+    display: flex; /* Makes the images inside the row align inline */
+    gap: 10px; /* Adds space between the images */
+}
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+    width: auto; 
+    height: 50px;
+    object-fit: contain;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .install p {
+    margin-top: 10px;
+}
+
 footer .copyright{
+    font-size: 16.3px;
     width: 100%;
     text-align: center;
+    margin-bottom: 0; 
 }
 
 #contact-details{
