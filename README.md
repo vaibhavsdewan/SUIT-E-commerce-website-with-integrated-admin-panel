@@ -33,7 +33,7 @@ To get a local copy of this project up and running, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/vaibhavsdewan//SUIT-E-commerce-website-with-integrated-admin-panel.git
+   git clone https://github.com/vaibhavsdewan/SUIT-E-commerce-website-with-integrated-admin-panel.git
 
 2. Open index.html in your browser to view the user panel and admin.html for the admin panel.
 
